@@ -1,0 +1,37 @@
+//program to on object class
+package org.stjohn.objectclasssdemo;
+class Sample
+{
+	}
+class Demo
+{
+	//constructor
+	Demo()
+	{
+		//resource allocate
+		System.out.println("Inside constructor");
+	}
+	protected void  finalize()
+	{
+		System.out.println("In Finalize method");
+	}
+}
+public class ObjectClassDemo {
+
+	public static void main(String[] args) {
+		Sample s=new Sample();
+		System.out.println(s.getClass());
+		System.out.println(s.hashCode());
+		
+		Demo d=new Demo();
+		System.out.println(d.getClass());
+		System.out.println(d.hashCode());
+		/*the object class is used when want to refer any object
+		 * whose data type you don't know*/
+		Object obj=new Object();
+		System.out.println(obj.getClass());
+		
+
+	}
+
+}
